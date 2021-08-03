@@ -1,0 +1,35 @@
+
+hello_world:	file format mach-o 64-bit x86-64
+
+
+Disassembly of section __TEXT,__text:
+
+0000000100003f60 <_main>:
+100003f60: 55                          	pushq	%rbp
+100003f61: 48 89 e5                    	movq	%rsp, %rbp
+100003f64: 48 83 ec 10                 	subq	$16, %rsp
+100003f68: c7 45 fc 00 00 00 00        	movl	$0, -4(%rbp)
+100003f6f: 48 8d 3d 34 00 00 00        	leaq	52(%rip), %rdi  # 100003faa <dyld_stub_binder+0x100003faa>
+100003f76: b0 00                       	movb	$0, %al
+100003f78: e8 0d 00 00 00              	callq	0x100003f8a <dyld_stub_binder+0x100003f8a>
+100003f7d: 31 c9                       	xorl	%ecx, %ecx
+100003f7f: 89 45 f8                    	movl	%eax, -8(%rbp)
+100003f82: 89 c8                       	movl	%ecx, %eax
+100003f84: 48 83 c4 10                 	addq	$16, %rsp
+100003f88: 5d                          	popq	%rbp
+100003f89: c3                          	retq
+
+Disassembly of section __TEXT,__stubs:
+
+0000000100003f8a <__stubs>:
+100003f8a: ff 25 70 40 00 00           	jmpq	*16496(%rip)  # 100008000 <dyld_stub_binder+0x100008000>
+
+Disassembly of section __TEXT,__stub_helper:
+
+0000000100003f90 <__stub_helper>:
+100003f90: 4c 8d 1d 71 40 00 00        	leaq	16497(%rip), %r11  # 100008008 <__dyld_private>
+100003f97: 41 53                       	pushq	%r11
+100003f99: ff 25 61 00 00 00           	jmpq	*97(%rip)  # 100004000 <dyld_stub_binder+0x100004000>
+100003f9f: 90                          	nop
+100003fa0: 68 00 00 00 00              	pushq	$0
+100003fa5: e9 e6 ff ff ff              	jmp	0x100003f90 <__stub_helper>
