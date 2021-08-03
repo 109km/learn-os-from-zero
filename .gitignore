@@ -12,3 +12,4 @@ bin/
 
 *.i
 *.o
+*.DS_Store
