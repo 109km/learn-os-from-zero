@@ -9,6 +9,7 @@
     "*.wxs": "javascript",
     "*.js": "javascriptreact",
     "*.ux": "vue",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "vgastr.h": "c"
   }
 }
